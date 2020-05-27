@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\Joeri\AppData\Local\JetBrains\Rider2020.1\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Joeri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_EmailMicroservice.-44003465.00" t="ExcludeRecursive" />
-    <e p="E:\Projects\EmailMicroservice" t="IncludeFlat">
+    <e p="C:\Users\Joeri\AppData\Local\JetBrains\Rider2020.1\resharper-host\Local\Transient\ReSharperHost\v201\SolutionCaches\_EmailMicroservice.-324091866.00" t="ExcludeRecursive" />
+    <e p="E:\Projects\S6-PersonalProject\EmailMicroservice" t="IncludeFlat">
       <e p="EmailMicroservice" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include">
-          <e p="WeatherForecastController.cs" t="Include" />
-        </e>
+        <e p="Controllers" t="Include" />
         <e p="EmailMicroservice.csproj" t="IncludeRecursive" />
+        <e p="Helper" t="Include">
+          <e p="EmailGenerator.cs" t="Include" />
+          <e p="EmailSettings.cs" t="Include" />
+          <e p="IEmailGenerator.cs" t="Include" />
+        </e>
+        <e p="MessageHandlers" t="Include">
+          <e p="RegisterEmailHandler.cs" t="Include" />
+        </e>
+        <e p="Messages" t="Include">
+          <e p="RegisterMessage.cs" t="Include" />
+        </e>
+        <e p="Models" t="Include">
+          <e p="Email.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -23,8 +35,11 @@
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
+        <e p="Services" t="Include">
+          <e p="EmailService.cs" t="Include" />
+          <e p="IEmailService.cs" t="Include" />
+        </e>
         <e p="Startup.cs" t="Include" />
-        <e p="WeatherForecast.cs" t="Include" />
       </e>
       <e p="EmailMicroservice.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

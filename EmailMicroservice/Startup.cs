@@ -2,6 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmailMicroservice.Helper;
+using EmailMicroservice.MessageHandlers;
+using EmailMicroservice.Services;
+using MessageBroker;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,8 +33,14 @@ namespace EmailMicroservice
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceCollection services)
         {
+            services.Configure<EmailSettings>(Configuration.GetSection(nameof(EmailSettings)));
+            services.AddMessageConsumer(Configuration["MessageQueueSettings:Uri"], 
+                Configuration["QueueName"], 
+                builder => builder.WithHandler<RegisterEmailHandler>("RegisterUser"));
+            services.AddTransient<IEmailService, EmailService>();
+            services.AddTransient<IEmailGenerator, EmailGenerator>();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
