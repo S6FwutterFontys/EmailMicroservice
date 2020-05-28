@@ -19,12 +19,14 @@ namespace EmailMicroservice.MessageHandlers
         public Task HandleMessageAsync(string messageType, RegisterMessage sendable)
         {
             Task.Run(() => { _emailService.SendRegisterEmail(sendable.Email, sendable.Username); });
-            
+            Console.WriteLine(sendable);
             return Task.CompletedTask;
         }
 
         public Task HandleMessageAsync(string messageType, byte[] obj)
         {
+            Console.WriteLine(messageType);
+            Console.WriteLine(obj);
             return HandleMessageAsync(messageType, JsonSerializer.Deserialize<RegisterMessage>((ReadOnlySpan<byte>) obj, (JsonSerializerOptions) null));
         }
     }

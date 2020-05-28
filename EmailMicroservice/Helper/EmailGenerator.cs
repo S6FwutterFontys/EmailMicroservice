@@ -9,7 +9,7 @@ namespace EmailMicroservice.Helper
             {
                 Subject = "Welcome to Fwutter!",
                 Body =
-                    "<h1><span>Welcome "+ username+", to Fwutter!</span></h1>\n<h2 style=\"color: #2e6c80;\"><span style=\"color: #000000;\">You have successfully created an account on Fwutter. Enjoy your stay!</span></h2>\n<p>&nbsp;</p>"
+                    "<h2><span>Hey there "+ username+",</span></h2>\n<p style=\"color: #2e6c80;\"><span style=\"color: #000000;\">You have successfully created an account on Fwutter.</p> <p> Please enjoy your stay!</span></p>\n<p>&nbsp;</p>"
             };
             return message;
         }
