@@ -111,5 +111,5 @@ jobs:
             ./kube_development/deployment.yaml
             ./kube_development/ingress.yaml
             ./kube_development/service.yaml
-            images: |
+          images: |
               ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_REPOSITORY }}:${{ github.sha }}
