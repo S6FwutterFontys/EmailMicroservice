@@ -107,9 +107,7 @@ jobs:
           namespace: development
           manifests: |
             ./kube_development/autoscaler.yaml
-            ./kube_development/certificate.yaml
             ./kube_development/deployment.yaml
-            ./kube_development/ingress.yaml
             ./kube_development/service.yaml
           images: |
               ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_REPOSITORY }}:${{ github.sha }}
