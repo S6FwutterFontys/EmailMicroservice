@@ -1,40 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: emailmicroservice
-  namespace: deployment
+  name: email-microservice
+  namespace: development
   labels:
-    app: user-microservice
+    app: email-microservice
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: emailmicroservice
+      app: email-microservice
   template:
     metadata:
       labels:
-        app: emailmicroservice
+        app: email-microservice
     spec:
       containers:
-        - name: emailmicroservice
+        - name: email-microservice
           image: joeriberman/email-microservice
           imagePullPolicy: IfNotPresent
           ports: 
-            - containerPort: 80
-          readinessProbe:
-            httpGet:
-              path: /ready
-              port: 80
-              scheme: HTTP
-            initialDelaySeconds: 15
-            periodSeconds: 15
-          livenessProbe:
-            httpGet:
-              path: /healthy
-              port: 80
-              scheme: HTTP
-            initialDelaySeconds: 15
-            periodSeconds: 15
+            - containerPort: 80  
           resources:
             limits:
               cpu: 100m
