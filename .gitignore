@@ -638,9 +638,3 @@ healthchecksdb
 MigrationBackup/
 
 # End of https://www.gitignore.io/api/osx,rider,linux,windows,dotnetcore,aspnetcore,visualstudio,visualstudiocode
-
-EmailMicroserviceTests/packages.config
-
-EmailMicroserviceTests/Properties/AssemblyInfo.cs
-
-EmailMicroservice/Properties/launchSettings.json
