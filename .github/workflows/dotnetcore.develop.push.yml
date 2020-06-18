@@ -134,4 +134,5 @@ jobs:
             ./kube_development/deployment.yaml
             ./kube_development/service.yaml
           images: |
-            ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_REPOSITORY }}:${{ github.sha }}
+            s652/email-service:ee5289cbc61b278d8f2ca969b8fa35aa7640b293
+          # ${{ secrets.DOCKER_USER }}/${{ secrets.DOCKER_REPOSITORY }}:${{ github.sha }}
