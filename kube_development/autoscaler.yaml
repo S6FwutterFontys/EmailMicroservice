@@ -1,6 +1,8 @@
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
 metadata:
+  labels:
+    app: email-microservice
   name: email-microservice
   namespace: development
 spec:
@@ -10,4 +12,4 @@ spec:
     name: email-microservice
   minReplicas: 1
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 75

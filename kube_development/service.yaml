@@ -6,9 +6,9 @@ metadata:
   name: email-microservice
   namespace: development
 spec:
-  selector:
-    app: email-microservice
-    type: ClusterIP
   ports:
     - port: 80
       targetPort: 80
+  selector:
+    app: email-microservice
+  type: ClusterIP
