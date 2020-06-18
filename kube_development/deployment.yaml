@@ -2,22 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: email-service
-  name: email-service
+    app: email-microservice
+  name: email-microservice
   namespace: development
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: email-service
+      app: email-microservice
   template:
     metadata:
       labels:
-        app: email-service
+        app: email-microservice
     spec:
       containers:
-        - name: email-service
-          image: s652/email-service
+        - name: email-microservice
+          image: joeriberman/email-microservice
           imagePullPolicy: IfNotPresent
           ports: 
             - containerPort: 80  
