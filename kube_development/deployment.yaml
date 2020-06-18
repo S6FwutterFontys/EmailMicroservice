@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: email-microservice
-  namespace: development
   labels:
     app: email-microservice
+  name: email-microservice
+  namespace: development
 spec:
   replicas: 1
   selector:
