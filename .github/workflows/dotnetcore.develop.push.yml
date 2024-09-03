@@ -49,12 +49,12 @@ jobs:
     steps:
       # Download artifacts from GitHub workflow to use in this job
       - name: Download release artifact
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: release-artifact
           path: ./release
       - name: Download Dockerfile artifact
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v4.1.7
         with:
           name: dockerfile-artifact
           path: .
